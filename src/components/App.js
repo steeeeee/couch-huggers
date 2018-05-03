@@ -1,5 +1,13 @@
 import React from 'react'
 
-const App = () => <div>Hello world</div>
+import SearchBar from './SearchBar'
+
+const App = () => (
+    <React.Fragment>
+        <h1>Cerca un film</h1>
+        <SearchBar />
+        <div>Results</div>
+    </React.Fragment>
+)
 
 export default App

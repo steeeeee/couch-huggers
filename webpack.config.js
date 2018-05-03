@@ -4,17 +4,20 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const config = {
     context:            path.join(__dirname, 'src'),
+    
     entry: {
         app:            './app.js'
     },
+    
     output: {
         filename:       './js/[name].bundle.js',
         path:           path.join(__dirname, 'dist')
     },
+
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.js|jsx$/,
                 include: /src/,
                 exclude: /node_modules/,
                 use: {
@@ -31,6 +34,10 @@ const config = {
                 use: ['html-loader']
             }
         ]
+    },
+
+    resolve: {
+        extensions: ['.js', '.jsx'],
     },
 
     plugins: [
