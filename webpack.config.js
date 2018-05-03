@@ -24,8 +24,8 @@ const config = {
                     }
                 }
             },
-            // Esporta HTML come stringa,
-            // minimizzata quando il compiler lo richiede
+            // Exports HTML as a string,
+            // minimized when the compiler requests it.
             {
                 test: /\.html$/,
                 use: ['html-loader']
